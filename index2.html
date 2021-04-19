@@ -12,11 +12,9 @@
             const params = new URLSearchParams(window.location.search)
             var fName = params.get("firstName");
             var lName = params.get("lastName")
-            var lName = params.get("yourAge");
+            var yAge = params.get("yourAge");
             var refresh = params.has("norefresh");
-            if (!refresh) {
-                window.location = "index2.html?firstName=" + fName + "&lastName=" + lName + "&yourAge=" + yourAge + "&norefresh=1";
-            }
+            document.getElementById("thatinfo").innerHTML = fName + " " + lName + " " + yAge
 
         }
     </script>
@@ -26,7 +24,7 @@
     <h1>
         Welcome!
     </h1>
-    <span></span>
+    <span id="thatinfo">Whitney Heinze</span>
 
 
 </body>
